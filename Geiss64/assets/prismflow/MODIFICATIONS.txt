@@ -1,0 +1,10 @@
+Local adapter and input pipeline added for Prism Flow.
+webgpu_present.js requests a high-performance adapter and exposes adapter diagnostics.
+error.js tolerates hosts without the upstream fatal overlay element.
+All other upstream modules retain their original notices.
+Source: https://www.geisswerks.com/geiss_hdr/ (retrieved 2026-11-15).
+2026-11-16: Added the separate C++ wormhole CPU port under native/prismflow,
+with full-map comparison against this unchanged JavaScript reference.
+2026-11-16: Added native CPU generation for all selected motion modes,
+dynamic descriptors, compatibility metadata and weighted motion selection.
+The JavaScript reference modules remain unchanged.

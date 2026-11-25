@@ -1,0 +1,36 @@
+{
+  "WDL": {
+    "url": "https://github.com/justinfrankel/WDL.git",
+    "commit": "6a67ec5788ca6ee252b19cd8071796db49d763a7"
+  },
+  "milkdrop-assets": {
+    "url": "https://github.com/jecassis/foo_vis_milk2.git",
+    "commit": "5b44cea79a8678a8f7e516e8c0cce0e4681f299b"
+  },
+  "d3dx": {
+    "package": "Microsoft.DXSDK.D3DX",
+    "version": "9.29.952.8"
+  },
+  "nlohmann-json": {
+    "version": "3.11.3",
+    "url": "https://github.com/nlohmann/json",
+    "license": "MIT"
+  },
+  "projectM": {
+    "version": "4.1.8",
+    "url": "https://github.com/projectM-visualizer/projectm",
+    "commit": "4967dc003e5206d7df3ff447287f7609c47d2343",
+    "license": "LGPL-2.1-or-later",
+    "local_patches": [
+      {
+        "file": "patches/projectm-embedded-version.patch",
+        "sha256": "52cd9715e1064cab664bf53547fa8dd8435c1a391067e1dc7f86e0eb63952acd",
+        "reason": "Use the component PROJECT_VERSION when embedded; CMAKE_PROJECT_VERSION belongs to the outer visualizer project."
+      }
+    ]
+  },
+  "projectm-eval": {
+    "commit": "e8c311e86f4d8c082e96e02b6a33525034eee6d4",
+    "license": "MIT"
+  }
+}

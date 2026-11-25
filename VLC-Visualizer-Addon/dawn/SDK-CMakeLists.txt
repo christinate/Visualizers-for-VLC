@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.24)
+project(VLCVisualizerNativeRuntime VERSION 0.1.0 LANGUAGES C CXX)
+set(VIS_NATIVE_COMMON_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/../runtime/include")
+set(VIS_NATIVE_API_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../native")
+set(VIS_NATIVE_VENDOR "${CMAKE_CURRENT_SOURCE_DIR}/../runtime/vendor")
+set(VIS_MINIAUDIO_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../runtime/vendor/miniaudio")
+option(VIS_BUILD_NATIVE_WINDOW "Build the native module host and recording helper" ON)
+include(Runtime.cmake)

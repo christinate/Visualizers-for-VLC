@@ -1,0 +1,14 @@
+{
+  "schema_version": 4,
+  "api_version": 4,
+  "id": "audio_color",
+  "name": "Audio Color Example",
+  "version": "@PROJECT_VERSION@",
+  "platform": "@EXAMPLE_PLATFORM@",
+  "architecture": "@EXAMPLE_ARCH@",
+  "adapter": "dawn",
+  "entrypoint": "audio_color@CMAKE_SHARED_MODULE_SUFFIX@",
+  "assets": "assets",
+  "dawn_revision": "@DAWN_REVISION@",
+  "settings": {"display": true, "fullscreen": true, "hdr_output": "sdr"}
+}

@@ -1,0 +1,7 @@
+{
+  "nlohmann-json": {
+    "version": "3.11.3",
+    "url": "https://github.com/nlohmann/json",
+    "license": "MIT"
+  }
+}

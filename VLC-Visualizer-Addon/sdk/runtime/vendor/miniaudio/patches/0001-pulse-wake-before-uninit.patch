@@ -1,0 +1,17 @@
+--- a/miniaudio.h
++++ b/miniaudio.h
+@@ -44316,6 +44316,14 @@
+ 
+     /* Wake up the worker thread and wait for it to properly terminate. */
+     if (!ma_context_is_backend_asynchronous(pDevice->pContext)) {
++    #if defined(MA_SUPPORT_PULSEAUDIO)
++        /* A removed PulseAudio stream may leave its custom data loop blocked
++           in pa_mainloop_iterate(). wakeupEvent alone cannot interrupt that
++           poll. Wake the backend after changing state, before joining it. */
++        if (pDevice->pContext->backend == ma_backend_pulseaudio && pDevice->pContext->callbacks.onDeviceDataLoopWakeup != NULL) {
++            pDevice->pContext->callbacks.onDeviceDataLoopWakeup(pDevice);
++        }
++    #endif
+         ma_event_signal(&pDevice->wakeupEvent);
+         ma_thread_wait(&pDevice->thread);
+     }

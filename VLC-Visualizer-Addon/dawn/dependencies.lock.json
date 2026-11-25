@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "source_revision": "7daf3b0bee2c73621001ab15b256b5a84fb0b45f",
+  "source_repository": "https://dawn.googlesource.com/dawn",
+  "release_tag": "v20261113.214538",
+  "prebuilt_usage": "Development bootstrap only. Build release dependencies from pinned source before final distribution.",
+  "SDL2": {
+    "version": "2.32.10",
+    "source_url": "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-2.32.10.tar.gz",
+    "source_sha256": "5f5993c530f084535c65a6879e9b26ad441169b3e25d789d83287040a9ca5165",
+    "windows_sdk_url": "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip",
+    "windows_sdk_sha256": "af347939395a58b365846aaea27391e69f9ec9d4dd650d6ac40802159b418a6e",
+    "license": "zlib"
+  },
+  "assets": {
+    "windows-x64": {
+      "file": "Dawn-7daf3b0bee2c73621001ab15b256b5a84fb0b45f-windows-latest-Release.tar.gz",
+      "sha256": "94a43a12086a510af44cfbbad9c3530c3a2249246ac5cff1241ee7ee47407811"
+    },
+    "macos-arm64": {
+      "file": "Dawn-7daf3b0bee2c73621001ab15b256b5a84fb0b45f-macos-latest-Release.tar.gz",
+      "sha256": "de3d572eb2a97f425dc1a1ed67eaafa517ec762b888e3d0695a2d78bc5fd2541"
+    },
+    "linux-x86_64": {
+      "file": "Dawn-7daf3b0bee2c73621001ab15b256b5a84fb0b45f-ubuntu-latest-Release.tar.gz",
+      "sha256": "cf08b933a45c7d10940a6614e0810b42119aab46389a0b405fa831a3ff962387"
+    }
+  },
+  "linux_source_patch": {
+    "path": "wayland-extended-srgb.patch",
+    "sha256": "4a136d07360d79ef1c2aa8db15b270cd90dd2504682dd803bca6d50c6b0b6301",
+    "files": {
+      "src/dawn/native/Surface.h": {
+        "before": "f7549151a400212c583810391a54cd9ab47bb39d6f86896fa51b115c10ce22a4",
+        "after": "e3838c04ef40b25977332a06f48975203f28474205be3e020b5d20faacaa4bbe"
+      },
+      "src/dawn/native/Surface.cpp": {
+        "before": "27a335db65030363fe7ab505436dd05e64858c793a73fbfe91c52274487d2ba4",
+        "after": "f60225716e993a2c469dfd90afc2f6f96c3f964d81cf6615130b5819c12667b2"
+      },
+      "src/dawn/native/vulkan/VulkanExtensions.h": {
+        "before": "33d28f2e07ef3b8b004b70becb2ecb877de89bc32ccab110207b670748c5c6fc",
+        "after": "989631bc7bb269c1815fcc205371cdfd8260dfda0c4a28d0d50926e18c017dc1"
+      },
+      "src/dawn/native/vulkan/VulkanExtensions.cpp": {
+        "before": "5dea6a4e44fd0aa2d392dca28a3b2718015525219e8de577661d6b6e0d5236a3",
+        "after": "565fcfda0858a7633165e3f1f091223204821f825f2cef78125fa31fb1af8aba"
+      },
+      "src/dawn/native/vulkan/PhysicalDeviceVk.cpp": {
+        "before": "edd526d46f180097be2d60ee51aa63c80ae64e19533a6c5a695c935bf80c4e21",
+        "after": "d5d9ea73e04b2fb6f7e30743e9abed4ebea0f496a6141623ac4dd48053b188ba"
+      },
+      "src/dawn/native/vulkan/VulkanBackend.cpp": {
+        "before": "d65f0dc20f86c5cfa1cb313fa799afd2ba0d24f32ad7112938146b55006ee852",
+        "after": "10f497ce820164e175bda7e254d96fd1b325942ef38d657a61aa8d8b1c443ec0"
+      },
+      "src/dawn/native/vulkan/SwapChainVk.cpp": {
+        "before": "1de76807bc407940459891a81405c94d9d17281881c1aebe3042d9d9fbb9c934",
+        "after": "210feaa39798667d8d4b16389c8ce0fe466249d9878ed61eecf1531fe300ded5"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "vlc-visualizers-browser",
+  "version": "0.4.0-rc.1",
+  "private": true,
+  "main": "main.cjs",
+  "description": "Local WebGPU renderer and recording-input selector",
+  "license": "GPL-2.0-or-later"
+}

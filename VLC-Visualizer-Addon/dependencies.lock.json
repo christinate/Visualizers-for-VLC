@@ -1,0 +1,20 @@
+{
+  "vlc": {
+    "url": "https://github.com/videolan/vlc.git",
+    "commit": "f7ee56b99860e9ff8965e899b854c68c6aaca561"
+  },
+  "nlohmann-json": {
+    "version": "3.11.3",
+    "url": "https://github.com/nlohmann/json",
+    "license": "MIT"
+  },
+  "Qt": {
+    "version": "6.8.3",
+    "toolchain": "MinGW 13.1.0 x86_64 MSVCRT",
+    "source": "https://download.qt.io/archive/qt/6.8/6.8.3/single/qt-everywhere-src-6.8.3.tar.xz"
+  },
+  "SDL2": {
+    "version": "2.32.10",
+    "source": "https://github.com/libsdl-org/SDL/releases/tag/release-2.32.10"
+  }
+}

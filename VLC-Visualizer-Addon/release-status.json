@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "version": "0.5.0-rc.1",
+  "channel": "prerelease",
+  "source": "https://github.com/christinate/Visualizers-for-VLC",
+  "downloads": "https://github.com/christinate/Visualizers-for-VLC/releases",
+  "platforms": ["windows-x64", "linux-x64", "macos-arm64"],
+  "windows_vlc": "3.0.24 AMD64",
+  "optional_dualsubs": {
+    "platform": "windows-x64",
+    "version": "0.2.0",
+    "source": "https://github.com/christinate/DualSubs-for-VLC/tree/b3b42d9bc6f1fa3408c6bcc8cfde58fdfb87e07b"
+  }
+}

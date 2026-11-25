@@ -1,0 +1,16 @@
+{
+  "schema_version": 2,
+  "api_version": 2,
+  "id": "example_visualizer",
+  "name": "Example OpenGL Visualizer",
+  "version": "1.0.0",
+  "platform": "linux",
+  "architecture": "x86_64",
+  "adapter": "opengl",
+  "entrypoint": "vis_example.so",
+  "settings": {
+    "display": true,
+    "fullscreen": true,
+    "hdr_output": "sdr"
+  }
+}

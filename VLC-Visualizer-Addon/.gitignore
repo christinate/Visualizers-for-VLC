@@ -1,0 +1,7 @@
+/build*/
+/payload/
+/releases/
+__pycache__/
+*.pdb
+/*.log
+*.node

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "api_version": 1,
+  "id": "example_visualizer",
+  "name": "Example Visualizer",
+  "version": "1.0.0",
+  "architecture": "x86_64",
+  "adapter": "winamp",
+  "entrypoint": "vis_example64.dll",
+  "settings": {"display": true, "fullscreen": true, "hdr_output": "sdr-expansion"}
+}

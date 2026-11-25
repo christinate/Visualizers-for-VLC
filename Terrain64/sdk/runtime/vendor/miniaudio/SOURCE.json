@@ -1,0 +1,34 @@
+{
+  "version": "0.11.26",
+  "revision": "877ea4a7c2601c7b0f2a44e83dfac42e6470fea6",
+  "repository": "https://github.com/mackron/miniaudio",
+  "files": [
+    {
+      "file": "miniaudio.h",
+      "bytes": 4162415,
+      "sha256": "fa282883e84a0b263417fce7eb3344cbfe9a996b934844f1fc36f7aa3b685052"
+    },
+    {
+      "file": "miniaudio.c",
+      "bytes": 56,
+      "sha256": "ab1984bb9804ffd7b0303813595d0b345a8a86c34da1daffc353a14b34102a65"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 2597,
+      "sha256": "457f1b500e0adf6bc059edddfa78a2f62012e7c3bb43476c20e0bd23b25ba0eb"
+    },
+    {
+      "file": "patches/0001-pulse-wake-before-uninit.patch",
+      "bytes": 810,
+      "sha256": "c644ea6a39a4de3db199f0a470f5294eb73666f4b85fb38190acdf43191e2219"
+    }
+  ],
+  "local_patches": [
+    {
+      "file": "patches/0001-pulse-wake-before-uninit.patch",
+      "upstream_header_sha256": "6b376c7fbb1352ba1e0e432ab66069b335ea9405e45cb6c30b97ef0f3c9c3e0e",
+      "reason": "Wake a failed PulseAudio data loop before joining it during device teardown."
+    }
+  ]
+}

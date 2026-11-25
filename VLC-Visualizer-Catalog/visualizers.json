@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "addon_api_version": 1,
+  "release": "0.4.0-rc.1",
+  "visualizers": [
+    {
+      "id": "geiss",
+      "name": "Prism Flow",
+      "version": "0.4.0-rc.1",
+      "project": "Geiss64",
+      "repository": null,
+      "installer_url": null,
+      "architecture": "x86_64",
+      "api_version": 3,
+      "platforms": [
+        "vlc-3.0.24-windows-amd64",
+        "winamp-x86-bridge",
+        "winamp-amd64-bridge",
+        "vlc-3.0.24-macos-arm64",
+        "vlc-3.0.20-linux-x86_64"
+      ],
+      "status": "release-candidate",
+      "hdr": "RGBA16F modern / scRGB expansion Classic",
+      "license": "Apache-2.0 modern / BSD-3-Clause Classic / GPL-2.0-or-later host",
+      "upstream": "https://github.com/geissomatik/geiss/",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "native_api_version": 3,
+      "native_hdr": "floating-point WebGPU when supported",
+      "native_backend": "Prism Flow WebGPU / original Geiss 4.30 compatibility",
+      "hdr_status": "experimental-opt-in",
+      "development": {
+        "windows_api_version": 4,
+        "macos_linux_api_version": 4,
+        "backend": "shared native Dawn",
+        "classic_available": true,
+        "validation": "local-dispatch-generated-pcm; real-player/release-qa-pending",
+        "version": "0.5.0-rc.1"
+      }
+    },
+    {
+      "id": "milkdrop",
+      "name": "MilkDrop 2 64-bit",
+      "version": "0.4.0-rc.1",
+      "project": "MilkDrop2-64",
+      "repository": null,
+      "installer_url": null,
+      "architecture": "x86_64",
+      "api_version": 1,
+      "platforms": [
+        "vlc-3.0.24-windows-amd64",
+        "winamp-x86-bridge",
+        "winamp-amd64-bridge",
+        "vlc-3.0.24-macos-arm64",
+        "vlc-3.0.20-linux-x86_64"
+      ],
+      "status": "release-candidate",
+      "hdr": "scRGB-output-expansion",
+      "license": "BSD-3-Clause / zlib / Microsoft D3DX runtime terms / projectM LGPL-2.1-or-later (native)",
+      "upstream": "https://www.geisswerks.com/about_milkdrop.html",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "native_api_version": 2,
+      "native_hdr": "SDR",
+      "native_backend": "projectM 4.1.8",
+      "hdr_status": "experimental-opt-in",
+      "development": {
+        "windows_api_version": 1,
+        "macos_linux_api_version": 2,
+        "backend": "original Windows MilkDrop / projectM on macOS/Linux",
+        "classic_available": false,
+        "validation": "local-dispatch-generated-pcm; real-player/release-qa-pending",
+        "version": "0.5.0-rc.1"
+      }
+    },
+    {
+      "id": "terrain",
+      "name": "Rhythm Terrain",
+      "version": "0.4.0-rc.1",
+      "project": "Terrain64",
+      "repository": null,
+      "installer_url": null,
+      "architecture": "x86_64",
+      "architectures": [
+        "x86_64",
+        "arm64"
+      ],
+      "api_version": 3,
+      "native_api_version": 3,
+      "platforms": [
+        "vlc-3.0.24-windows-amd64",
+        "winamp-x86-bridge",
+        "winamp-amd64-bridge",
+        "macos-arm64-webgpu",
+        "linux-x86_64-webgpu-required"
+      ],
+      "status": "release-candidate",
+      "hdr": "floating-point WebGPU when supported",
+      "native_hdr": "floating-point WebGPU when supported",
+      "native_backend": "WebGPU",
+      "license": "MIT renderer / GPL-2.0-or-later host",
+      "upstream": "https://www.geisswerks.com/about_terrain.html",
+      "hdr_status": "experimental-opt-in",
+      "development": {
+        "windows_api_version": 4,
+        "macos_linux_api_version": 4,
+        "backend": "shared native Dawn",
+        "classic_available": false,
+        "validation": "local-dispatch-generated-pcm; real-player/release-qa-pending",
+        "version": "0.5.0-rc.1"
+      }
+    }
+  ],
+  "addon_release_notice": {
+    "version": "0.2.0-rc.1",
+    "status": "blocked-security-review",
+    "reason": "Reported Microsoft Defender behavior detection in combined addon installer; determination pending.",
+    "detection": "Behavior:Win32/DefenseEvasion.A!ml"
+  },
+  "addon_api_versions": [
+    1,
+    2,
+    3
+  ],
+  "validation_notice": "HDR is experimental and off by default; no physical HDR display is available. Actual Winamp UI remains unverified. Mint currently has no compatible WebGPU adapter.",
+  "development": {
+    "status": "native-migration",
+    "source_branch": "feature/dawn-native",
+    "api_version": 4,
+    "dawn_revision": "7daf3b0bee2c73621001ab15b256b5a84fb0b45f",
+    "installers_available": false,
+    "additional_visualizers": [
+      {
+        "id": "beach",
+        "name": "Beach",
+        "project": "Terrain64",
+        "api_version": 4,
+        "platforms": ["windows-x86_64", "linux-x86_64", "macos-arm64"],
+        "configuration": "beach.ini"
+      },
+      {
+        "id": "objects",
+        "name": "Objects",
+        "project": "Terrain64",
+        "api_version": 4,
+        "platforms": ["windows-x86_64", "linux-x86_64", "macos-arm64"],
+        "configuration": "objects.ini"
+      },
+      {
+        "id": "undersea",
+        "name": "UnderSea",
+        "project": "Terrain64",
+        "api_version": 4,
+        "platforms": ["windows-x86_64", "linux-x86_64", "macos-arm64"],
+        "configuration": "undersea.ini"
+      },
+      {
+        "id": "coralcanyon",
+        "name": "CoralCanyon",
+        "project": "Terrain64",
+        "api_version": 4,
+        "platforms": ["windows-x86_64", "linux-x86_64", "macos-arm64"],
+        "configuration": "coralcanyon.ini"
+      }
+    ],
+    "validation_notice": "Native dispatch passes generated PCM checks on Windows D3D12, macOS Metal and Linux lavapipe. Real players, final installers, soaks and security remain release gates. HDR remains Experimental/off by default: Windows D3D12 has native scRGB capability/fallback checks; physical HDR is unverified. Mac/Linux HDR transport remains open with SDR fallback. Mac follow-ups are deferred while macbook1 is offline. NVK presentation is unsupported on the tested non-DRI3 Xorg session; separate NVK numerical/leak failures remain recorded.",
+    "version": "0.5.0-rc.1"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "preserved_before_native_candidate": "0.5.0-rc.1",
+  "projects": {
+    "VLC-Visualizer-Addon": {
+      "tags": [
+        "7818c6eed14fa8bb517ce63b44b1c92898c8309e refs/tags/v0.2.0-rc.1",
+        "54dde9e3a6b2ca8284ad667b52e18a6e6fe29c08 refs/tags/v0.3.0-rc.1",
+        "197829584139701475112ea8ae778b48e8972ac0 refs/tags/v0.4.0-rc.1"
+      ],
+      "artifacts": {
+        "releases/DO-NOT-RUN-0.2.0-rc.1.txt": {
+          "bytes": 326,
+          "sha256": "7684cc95455502dcdd52de5085f39a541c79457ce26a5a4c420aadc94222975e"
+        },
+        "releases/RELEASE.json": {
+          "bytes": 200,
+          "sha256": "9db630ca7df72fa30899b5f86ad27e00978128cb2f04e81328f583972ffd4e3f"
+        },
+        "releases/SHA256SUMS.json": {
+          "bytes": 2004,
+          "sha256": "fa8f0fb41e896507e3461ba66f158270ea131150ca87195afe34e84506426aac"
+        },
+        "releases/third-party-sources/qtbase-everywhere-src-6.8.3.tar.xz": {
+          "bytes": 48426536,
+          "sha256": "56001b905601bb9023d399f3ba780d7fa940f3e4861e496a7c490331f49e0b80"
+        },
+        "releases/third-party-sources/qtsvg-everywhere-src-6.8.3.tar.xz": {
+          "bytes": 2009072,
+          "sha256": "35eb516460f00f264eb504baa253432384351cf23fb9980a5857190e8deef438"
+        },
+        "releases/VLC-Visualizer-Addon-0.2.0-rc.1-payload.zip": {
+          "bytes": 4828254,
+          "sha256": "efe9834cbaff6b3ec1094da2cad3740c5c3d2fab5ce55cd652d07419fb30a06f"
+        },
+        "releases/VLC-Visualizer-Addon-0.2.0-rc.1-setup.exe": {
+          "bytes": 4912427,
+          "sha256": "e675bc212ad802f85887e92373df75ff3389557887561efd4f0bc04f69ebbabe"
+        },
+        "releases/VLC-Visualizer-Addon-0.2.0-rc.1-source.zip": {
+          "bytes": 699811,
+          "sha256": "ac19b90d971491777ffb9196348a17c4679778c0b196c4ea55f9dbe89596ded4"
+        },
+        "releases/VLC-Visualizer-Addon-0.3.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 2700909,
+          "sha256": "2ac72a8233b1898838586526cb8391ad5de2e2c95215d900a9ef5bc6e2c06e49"
+        },
+        "releases/VLC-Visualizer-Addon-0.3.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 2568104,
+          "sha256": "f9049e57f97f33273894cde695b73711b3741b5d6f44aca3c1ce89e519d434a0"
+        },
+        "releases/VLC-Visualizer-Addon-0.3.0-rc.1-payload.zip": {
+          "bytes": 22961523,
+          "sha256": "a9a6dd7bff2a0eb774c29c2a1167a8933753aaf77968fd2c272b0d0b70418e6a"
+        },
+        "releases/VLC-Visualizer-Addon-0.3.0-rc.1-setup.exe": {
+          "bytes": 22711472,
+          "sha256": "89af0b9e422fab232a30395a150035d549c02f9d1a87131edbeb5d8ff81881e9"
+        },
+        "releases/VLC-Visualizer-Addon-0.3.0-rc.1-source.zip": {
+          "bytes": 2549062,
+          "sha256": "c421c9234596f3410e873e09f30d511836e202559426cf20f40f6e1cf02a2040"
+        },
+        "releases/VLC-Visualizer-Addon-0.4.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 126572114,
+          "sha256": "df15ebcca5a685b5cd12f67fd05746d9e70ed3c4509094e7a1f840e87ea8ed3c"
+        },
+        "releases/VLC-Visualizer-Addon-0.4.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 123378841,
+          "sha256": "7209c61b21f811ea9d016aa559fa33aa504735a04b84105b23cbaac34321a2e3"
+        },
+        "releases/VLC-Visualizer-Addon-0.4.0-rc.1-payload.zip": {
+          "bytes": 655344001,
+          "sha256": "cc810694552f7536605a9a956be855a5b6f924cab3a27cf044c5f18789d863ee"
+        },
+        "releases/VLC-Visualizer-Addon-0.4.0-rc.1-setup.exe": {
+          "bytes": 654552819,
+          "sha256": "9f2ed3e19d515524392b81ad7087ea1e8cc201e9fef55c3184270bb640d7d9cd"
+        },
+        "releases/VLC-Visualizer-Addon-0.4.0-rc.1-source.zip": {
+          "bytes": 2692739,
+          "sha256": "72f6338dfc7627a1c8e2393632b704afa3902158ff2e67160217d9519b48b6b8"
+        }
+      }
+    },
+    "Geiss64": {
+      "tags": [
+        "bf13ff4b2b1690b439bf437dd07dc24dbb41193e refs/tags/v0.2.0-rc.1",
+        "e0e79a5be9658bee277668808c36abd2e03d51f9 refs/tags/v0.3.0-rc.1",
+        "0d697bacc242f43e4671048358c068ee85a1d6cc refs/tags/v0.4.0-rc.1"
+      ],
+      "artifacts": {
+        "releases/Geiss64-0.2.0-rc.1-portable.zip": {
+          "bytes": 747063,
+          "sha256": "f9985c61ab07aac31463b926a90a2a11e722fd70de9486b774a5af5e37fe95c6"
+        },
+        "releases/Geiss64-0.2.0-rc.1-setup.exe": {
+          "bytes": 830799,
+          "sha256": "004cea13bc986acdcc01a2309f0dafd1bc169d9d7e91e9981c989b45688c6299"
+        },
+        "releases/Geiss64-0.2.0-rc.1-source.zip": {
+          "bytes": 395928,
+          "sha256": "a98d8fdf78fb464bbe31a3d662b9eb4b1c59e5f81e2ddc7d335307546f719d20"
+        },
+        "releases/Geiss64-0.3.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 164656,
+          "sha256": "69c2ab92d1f96089db54a92fde663e132f94235661af67817cf95cc12ef9f782"
+        },
+        "releases/Geiss64-0.3.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 140862,
+          "sha256": "7cf68e076a120ee54d9c99b7ddd610c76a2997c456bc2ed4ac2a1c6d0546ebc4"
+        },
+        "releases/Geiss64-0.3.0-rc.1-portable.zip": {
+          "bytes": 753109,
+          "sha256": "e61e10a36ce0bf0ccaaf754a6dba45f215734a85b439ab9d518a3b5e4f6612d6"
+        },
+        "releases/Geiss64-0.3.0-rc.1-setup.exe": {
+          "bytes": 836719,
+          "sha256": "6d0a1697ca9243adddefd378df42160dae4f7c45745dd8e63ae8165f905efcae"
+        },
+        "releases/Geiss64-0.3.0-rc.1-source.zip": {
+          "bytes": 474138,
+          "sha256": "6d861fb08d8f2c747793f751f1964508e53368689306ae77ab8681da9bf4b39c"
+        },
+        "releases/PrismFlow64-0.4.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 324431,
+          "sha256": "445386540f4f0d9fd08ad8a86151449a99264bbf743fbb961c4cfa5e3de85a09"
+        },
+        "releases/PrismFlow64-0.4.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 302204,
+          "sha256": "b9e9c7e8057044037076838911411e5549147a8c4a6bb846496384c8c4ccdd7b"
+        },
+        "releases/PrismFlow64-0.4.0-rc.1-portable.zip": {
+          "bytes": 159363705,
+          "sha256": "a13c1c41354cf04e1f755c0a75e8384b743246e4baf6e9ee82d944a388c643b4"
+        },
+        "releases/PrismFlow64-0.4.0-rc.1-setup.exe": {
+          "bytes": 158970105,
+          "sha256": "73eeee57ef2dfda3471c46dc0ef7e28f59ec33aaf4eea590542766b86ad0c028"
+        },
+        "releases/PrismFlow64-0.4.0-rc.1-source.zip": {
+          "bytes": 719137,
+          "sha256": "1e24ac8368a48f1d9e72aff6a836eab05ca56372a4f36014f1e62adceb571543"
+        },
+        "releases/RELEASE.json": {
+          "bytes": 169,
+          "sha256": "ae252ce994b65efc02bdfaf94a89228d72400281ee0f1daf39061e07aa56f375"
+        },
+        "releases/SHA256SUMS.json": {
+          "bytes": 1501,
+          "sha256": "5cde24cdb0033a346ae879d0a0821ef1b54f61272e37424d5c049e0682504b42"
+        }
+      }
+    },
+    "MilkDrop2-64": {
+      "tags": [
+        "fa52ffa4b63620343b434aa68416a29263dec3d3 refs/tags/v0.2.0-rc.1",
+        "b9c536131d92ae043191ae97ab0bec4b445d2f5b refs/tags/v0.3.0-rc.1",
+        "31e74447396b57f9ec76076f87496563aa5fa6da refs/tags/v0.4.0-rc.1"
+      ],
+      "artifacts": {
+        "releases/MilkDrop2-64-0.2.0-rc.1-portable.zip": {
+          "bytes": 3214594,
+          "sha256": "c9d33eaab1a7b760cb2131fbcc96f26cfd1eb2c3766c9eaeccc243948288bbd7"
+        },
+        "releases/MilkDrop2-64-0.2.0-rc.1-setup.exe": {
+          "bytes": 3279367,
+          "sha256": "64acb11c8f4b611c0d8264cf8c4f6ffd53fa205db79cd8f24a1492872eb06b92"
+        },
+        "releases/MilkDrop2-64-0.2.0-rc.1-source.zip": {
+          "bytes": 15139525,
+          "sha256": "0774696fd40f62f994996afd8c71c04729b19033a92f9780652eacd75bc655d1"
+        },
+        "releases/MilkDrop2-64-0.3.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 1868014,
+          "sha256": "394978e1471ad31b4a77be1da9679999fc4023e4e1ea787dd113dd452f17195c"
+        },
+        "releases/MilkDrop2-64-0.3.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 1327196,
+          "sha256": "a52739b276f5321a50605ac986b4aaa972c43e8bf7856b17e8446b884f77962d"
+        },
+        "releases/MilkDrop2-64-0.3.0-rc.1-portable.zip": {
+          "bytes": 3242856,
+          "sha256": "1b2a8039eb6fed75605c9ff4de983e9bcb8a7316f0a6f04d0d3c041a4e4cf96f"
+        },
+        "releases/MilkDrop2-64-0.3.0-rc.1-setup.exe": {
+          "bytes": 3304812,
+          "sha256": "f711dabdd808e4edd156af7d78b46cb292d4bc4da204a4a99ef3b1fddf7ba56e"
+        },
+        "releases/MilkDrop2-64-0.3.0-rc.1-source.zip": {
+          "bytes": 63521908,
+          "sha256": "55fe5ecd5a24503782b5a2139b4d7e12f7a578d0ebde57544f48d31b1658c456"
+        },
+        "releases/MilkDrop2-64-0.4.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 1877132,
+          "sha256": "30010fa06f058bee1519575bf63385240cc9912b8aefd663d2b27feaeb7c2c10"
+        },
+        "releases/MilkDrop2-64-0.4.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 1336959,
+          "sha256": "f9f5f4e3487c9fe97299dd86fdb3b973c9173d9620139dd7c959978c8d1c27f1"
+        },
+        "releases/MilkDrop2-64-0.4.0-rc.1-portable.zip": {
+          "bytes": 161690036,
+          "sha256": "c946fdcfb2326cebd22011342207d0a2c01d7e61144855b6203cb54479e0d72f"
+        },
+        "releases/MilkDrop2-64-0.4.0-rc.1-setup.exe": {
+          "bytes": 161278003,
+          "sha256": "bb4996c3e3f69751dbaf4e7d4bfa2f0df1ff554cbc2c0881ce065983a8e360bc"
+        },
+        "releases/MilkDrop2-64-0.4.0-rc.1-source.zip": {
+          "bytes": 63600174,
+          "sha256": "28319235aa46547bd7528afb691d7f209d38ff8f63934e6c31bfb0eafe4983de"
+        },
+        "releases/RELEASE.json": {
+          "bytes": 170,
+          "sha256": "05fc6bbb9af8be232a2f0d43538bb0768b04b8ffdc89ea25bc6aabc466c1d62b"
+        },
+        "releases/SHA256SUMS.json": {
+          "bytes": 1546,
+          "sha256": "a040ef64f708b5f10990027f5d7b6681dc2814e9bf937efa49fe791107535460"
+        }
+      }
+    },
+    "Terrain64": {
+      "tags": [
+        "ec4f1924864b78828c76ffe8e0cdf5f098a60068 refs/tags/v0.4.0-rc.1"
+      ],
+      "artifacts": {
+        "releases/RELEASE.json": {
+          "bytes": 167,
+          "sha256": "0071ad8d2b279217a6244c59bcc5cd6a9a51ab257173c6b1504ec88d1afebd96"
+        },
+        "releases/SHA256SUMS.json": {
+          "bytes": 640,
+          "sha256": "23f9ddbe763303d1148baa53590b128067e7cd7dd60501de06442880a5c1d968"
+        },
+        "releases/Terrain64-0.4.0-rc.1-linux-x86_64.tar.gz": {
+          "bytes": 118321,
+          "sha256": "e4fa1a299b25d650d152274726ac803a1a9f4d1c92b53f6c9ddae262b58e7b02"
+        },
+        "releases/Terrain64-0.4.0-rc.1-macos-arm64.tar.gz": {
+          "bytes": 101628,
+          "sha256": "9b94b34e437c9d1d2571a8464f2c532d1d8852c9c293531f40611204359b909c"
+        },
+        "releases/Terrain64-0.4.0-rc.1-portable.zip": {
+          "bytes": 159043596,
+          "sha256": "1e3c0dd602c750ce87c37d978691dad2af3923fe8d98209d1ad6a11be1fd15e9"
+        },
+        "releases/Terrain64-0.4.0-rc.1-setup.exe": {
+          "bytes": 158652247,
+          "sha256": "64cde9ee5fbc858e435f3d6c9451fadc80d1046b8198651f92476b36f3e15f85"
+        },
+        "releases/Terrain64-0.4.0-rc.1-source.zip": {
+          "bytes": 278959,
+          "sha256": "7ed2c8f58d136b55ae86949af4d8a7698f427fc5f3cee4559ee0e8086af8a9b3"
+        }
+      }
+    },
+    "VLC-Visualizer-Catalog": {
+      "tags": [
+        "d2adf485a0abc110b065c6041a904f3be6b587d7 refs/tags/v0.2.0-rc.1",
+        "a4272e55380c2481f0a7da22d669a57df9815a3a refs/tags/v0.3.0-rc.1",
+        "0f338d54a08674d935e689fe134e5d682f17141b refs/tags/v0.4.0-rc.1"
+      ],
+      "artifacts": {
+        "releases/RELEASE.json": {
+          "bytes": 180,
+          "sha256": "87da57618d52ef01801709250664b46a20f2800ca44649e898d44eab219560bb"
+        },
+        "releases/SHA256SUMS.json": {
+          "bytes": 673,
+          "sha256": "a0e8c5a742611915ce876e904e8c88940f9ee7d4f4a7841b383481f0439da41d"
+        },
+        "releases/VLC-Visualizer-Catalog-0.2.0-rc.1-source.zip": {
+          "bytes": 12422,
+          "sha256": "5e3b3e428f2090aff7f39e7b712c10e5fb483c62531e986383872432a49c3e8d"
+        },
+        "releases/VLC-Visualizer-Catalog-0.2.0-rc.1.zip": {
+          "bytes": 5601,
+          "sha256": "d7aac197f76eb9e951940f22da353cb215c446eee9c3c7e242476163b42e96a6"
+        },
+        "releases/VLC-Visualizer-Catalog-0.3.0-rc.1-source.zip": {
+          "bytes": 18422,
+          "sha256": "0274d46d93d0453acc6368249d2b659ac939a02f7dd1745f73469afe843921d6"
+        },
+        "releases/VLC-Visualizer-Catalog-0.4.0-rc.1-source.zip": {
+          "bytes": 22145,
+          "sha256": "6041ab6ce3fbe1b6dbc0959612979227d005fe9678f112d6c7245379b315a81d"
+        },
+        "releases/VLC-Visualizer-Catalog-0.4.0-rc.1.zip": {
+          "bytes": 13879,
+          "sha256": "423cdbe8ed20aad086999fafeecb63dbdcd36be980ed520b8091d5b407cf39f3"
+        }
+      }
+    }
+  }
+}

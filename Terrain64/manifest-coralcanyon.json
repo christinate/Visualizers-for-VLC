@@ -1,0 +1,19 @@
+{
+  "schema_version": 4,
+  "api_version": 4,
+  "id": "coralcanyon",
+  "name": "CoralCanyon",
+  "version": "0.5.0-rc.1",
+  "platform": "windows",
+  "architecture": "x86_64",
+  "adapter": "dawn",
+  "entrypoint": "coralcanyon_dawn.dll",
+  "assets": "assets",
+  "dawn_revision": "7daf3b0bee2c73621001ab15b256b5a84fb0b45f",
+  "settings": {
+    "display": true,
+    "fullscreen": true,
+    "hdr_output": "native-float",
+    "hdr_experimental": true
+  }
+}

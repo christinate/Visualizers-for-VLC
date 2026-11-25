@@ -1,0 +1,48 @@
+cmake_minimum_required(VERSION 3.24)
+project(MilkDrop2_64 VERSION 0.5.0 LANGUAGES C CXX)
+option(VIS_BUILD_DAWN_RUNTIME "Build the native window/capture runtime from the pinned SDK" OFF)
+if(UNIX)
+  add_subdirectory(sdk/native)
+  add_subdirectory(native)
+  if(VIS_BUILD_DAWN_RUNTIME)
+    add_subdirectory(sdk/dawn)
+  endif()
+  return()
+endif()
+enable_language(RC)
+if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
+  message(FATAL_ERROR "MilkDrop rendering requires Windows AMD64/MSVC. Build Winamp bridges separately.")
+endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+option(ENABLE_ASAN "Enable AddressSanitizer for renderer validation" OFF)
+add_subdirectory(sdk/runtime)
+file(GLOB EEL vendor/WDL/eel2/nseel-*.c)
+add_library(eel64 STATIC ${EEL})
+target_compile_definitions(eel64 PUBLIC EEL_TARGET_PORTABLE NSEEL_LOOPFUNC_SUPPORT_MAXLEN=1048576)
+file(GLOB SOURCES source/vis_milk2/*.cpp)
+add_library(vis_milkdrop64 MODULE ${SOURCES} source/vis_milk2/plugin.rc ports/milkdrop_services.cpp)
+target_include_directories(vis_milkdrop64 PRIVATE source/Wasabi source/vis_milk2 vendor/d3dx/include ports)
+target_compile_definitions(vis_milkdrop64 PRIVATE NOMINMAX _CRT_SECURE_NO_WARNINGS _CRT_NON_CONFORMING_SWPRINTFS USE_VIS_HDR_HWND STRSAFE_NO_DEPRECATE NSEEL_REENTRANT_EXECUTION EEL_TARGET_PORTABLE)
+# RC compiles plugin.rc separately; these options belong to C++ compilation.
+target_compile_options(vis_milkdrop64 PRIVATE
+  "$<$<COMPILE_LANGUAGE:CXX>:/FI${CMAKE_CURRENT_SOURCE_DIR}/ports/legacy_windows.h>"
+  "$<$<COMPILE_LANGUAGE:CXX>:/permissive>"
+  "$<$<COMPILE_LANGUAGE:CXX>:/Zc:forScope->"
+  "$<$<COMPILE_LANGUAGE:CXX>:/wd4244>"
+  "$<$<COMPILE_LANGUAGE:CXX>:/wd4267>")
+target_link_libraries(vis_milkdrop64 PRIVATE eel64 "${CMAKE_SOURCE_DIR}/vendor/d3dx/release/lib/x64/d3dx9.lib" d3d9 shlwapi winmm comctl32 shell32 comdlg32 ole32)
+if(ENABLE_ASAN)
+  foreach(target eel64 vis_milkdrop64)
+    set_property(TARGET ${target} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+    target_compile_options(${target} PRIVATE
+      "$<$<COMPILE_LANGUAGE:C,CXX>:/fsanitize=address>"
+      "$<$<COMPILE_LANGUAGE:C,CXX>:/Zi>")
+    target_link_options(${target} PRIVATE /INCREMENTAL:NO /DEBUG)
+  endforeach()
+endif()
+if(VIS_BUILD_DAWN_RUNTIME)
+  add_subdirectory(sdk/dawn)
+endif()

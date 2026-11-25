@@ -1,0 +1,205 @@
+{
+  "format_version": 1,
+  "reference_hashes": {
+    "gpu_warp.js": "fe7971784d8525251e4c3a87cc1e372f7a0e0a396e0ebfa51417110a8c2fc67a",
+    "const.js": "cbd597776d5c9e6b7ae2ce4234f27d957e627ae32c06e3c84734438c0faf6f72",
+    "gpu_advected_dots.js": "d8ccfb6a903b9697f1d95cb1e2815f34c22218d100a89c86f507170007d26bb4",
+    "coords.js": "a68f2b9b26872b4e1334a81173bf152149071059a3f75ee58863c244dc49444c",
+    "gpu_dynamic_warp.js": "8a4c3c1c10be5763356b41b114a1fca48cd22c55457374cb6f7d743526a23b21",
+    "dot_renderer.js": "a076d2b65af3a124fb95ffbecdd7aa4d7ee7382aec1b8fe65c287e10b3ca6cad",
+    "noise_textures.js": "1757e8a4c6972c22eb2610851ca8c039ae167b4795836f978d21e55b1d6bac60",
+    "gpu_text_overlay.js": "5325c02c200b2433042b2da011fedd58c8aeda4ae1e673bb20f4daafe6ae0391",
+    "webgpu_present.js": "b168b751a665bcbe03b6dad8a115471d0d67e1873e8c3a353e17282794adffcc",
+    "error.js": "ee2a0acfe4f8e5625eb986273d9483728dac8409155d721af33e05107ae0b3fa",
+    "draw_palette.js": "615d99f8d8e778859cad528ca2d2cd45897773725a74f64e44231f63e75fe807"
+  },
+  "shaders": [
+    {
+      "name": "warp",
+      "file": "warp.wgsl",
+      "sha256": "c61ed1f0c16f0723a8c0e47e49d9c1a7ffb302d882a4d5b7bb263bc3c726912d",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rgba16float"
+      ]
+    },
+    {
+      "name": "auto_exposure",
+      "file": "auto_exposure.wgsl",
+      "sha256": "4c505d471bf28a42869268372f5e5716714b777d5146bf6099fdb4eb6374228c",
+      "kind": "compute",
+      "entry": "cs_main"
+    },
+    {
+      "name": "dynamic_35",
+      "file": "dynamic_35.wgsl",
+      "sha256": "d11d55a46c2afc5405113746faca6096ed92a698e8557be9542c3860b3e896c3",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rg16float"
+      ],
+      "layout": "dynamic"
+    },
+    {
+      "name": "dynamic_37",
+      "file": "dynamic_37.wgsl",
+      "sha256": "fb5b6f6fe4ebc69ae89ceeaf9199cf60ad1c62a84cb6310f0e3e375f46af0f7d",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rg16float"
+      ],
+      "layout": "dynamic"
+    },
+    {
+      "name": "dynamic_38",
+      "file": "dynamic_38.wgsl",
+      "sha256": "5842474ba8e71bc4cf9f19915ff7dd8e57a8215148fa99a5a0784401159edd2e",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rg16float"
+      ],
+      "layout": "dynamic"
+    },
+    {
+      "name": "dynamic_39",
+      "file": "dynamic_39.wgsl",
+      "sha256": "0ef67702a1d4fa4e8ffb25351bc76dbf7c51df64f78aba18b622efbf8a3f02ab",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rg16float"
+      ],
+      "layout": "dynamic"
+    },
+    {
+      "name": "noise_2d",
+      "file": "noise_2d.wgsl",
+      "sha256": "40f7057eb066b5c0126767b61dc330d369ede27b7362c7ccaf5bd702499c812f",
+      "kind": "compute",
+      "entry": "cs_main"
+    },
+    {
+      "name": "noise_3d",
+      "file": "noise_3d.wgsl",
+      "sha256": "320b5d3814c11d6b5f1da6af55a8faf6b0bd5a51afffbf766bd4ab5ea0420da3",
+      "kind": "compute",
+      "entry": "cs_main"
+    },
+    {
+      "name": "warp_dots",
+      "file": "warp_dots.wgsl",
+      "sha256": "1aecaa590fef4b36a5fab70b9593fb22519c8ff3b21fe37a1c8ac8be623047cd",
+      "kind": "compute",
+      "entry": "cs_main"
+    },
+    {
+      "name": "bokeh_advection",
+      "file": "bokeh_advection.wgsl",
+      "sha256": "91707b53da70ca65baa1af4faf83ad1a944b1720fa254900852637e6d4adcbf6",
+      "kind": "compute",
+      "entry": "cs_bokeh"
+    },
+    {
+      "name": "bokeh_deaths",
+      "file": "bokeh_deaths.wgsl",
+      "sha256": "f65b71b2816722618d4443431cfe91222e451ae60265e23a8dc9b355f9c35bd7",
+      "kind": "compute",
+      "entry": "cs_record_deaths"
+    },
+    {
+      "name": "bokeh_stats",
+      "file": "bokeh_stats.wgsl",
+      "sha256": "910634d89c875cc62b4ff438ce4b141429dabca59bc11cfdbc6178cf33807033",
+      "kind": "compute",
+      "entry": "cs_bokeh_stats"
+    },
+    {
+      "name": "bokeh_draw",
+      "file": "bokeh_draw.wgsl",
+      "sha256": "fcec5f9a07409c5b739e267e5ced7bdbb583fbdbccf34de1d60abac58476a513",
+      "kind": "render",
+      "vertex": "vs_bokeh",
+      "fragment": "fs_bokeh",
+      "topology": "triangle-strip",
+      "formats": [
+        "rgba16float",
+        "rgba8unorm",
+        "bgra8unorm"
+      ],
+      "blend": "bokeh"
+    },
+    {
+      "name": "dots",
+      "file": "dots.wgsl",
+      "sha256": "768c0ae46837ce0c1935d5376fc5c54caf73213eaec03549b6644113be0210c8",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-strip",
+      "formats": [
+        "rgba16float"
+      ],
+      "vertex_buffers": "dots",
+      "blend": "additive"
+    },
+    {
+      "name": "text_overlay",
+      "file": "text_overlay.wgsl",
+      "sha256": "dd71d1967152c0237f892d7b64790ef9477abbe5ae4b1f9ee56304469dfd0458",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rgba16float"
+      ],
+      "blend": "additive"
+    },
+    {
+      "name": "present",
+      "file": "present.wgsl",
+      "sha256": "f1ec726f540592f25b88a9f5c0b013a4f71ba6f754848fecf778141a66eccc47",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rgba16float",
+        "rgba8unorm",
+        "bgra8unorm"
+      ],
+      "native_fixes": [
+        "calibration-final-square-index"
+      ],
+      "reference_shader_sha256": "e05a877fe7f488ddb8ed58f7181f18b1abd51a2d118be7c19c64b6ee47414898"
+    },
+    {
+      "name": "palette_overlay",
+      "file": "palette_overlay.wgsl",
+      "sha256": "5f5738dc1046bc8e78bce94a644bda9e2a1affe1ec84f578fc3ee315c7efe117",
+      "kind": "render",
+      "vertex": "vs_main",
+      "fragment": "fs_main",
+      "topology": "triangle-list",
+      "formats": [
+        "rgba16float",
+        "rgba8unorm",
+        "bgra8unorm"
+      ]
+    }
+  ]
+}

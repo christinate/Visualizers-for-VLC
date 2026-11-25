@@ -1,0 +1,79 @@
+diff --git a/src/dawn/native/Surface.cpp b/src/dawn/native/Surface.cpp
+--- a/src/dawn/native/Surface.cpp
++++ b/src/dawn/native/Surface.cpp
+@@ -113,4 +112,0 @@
+-    if (descriptor.Has<SurfaceColorManagement>()) {
+-        return DAWN_VALIDATION_ERROR("SurfaceColorManagement unsupported.");
+-    }
+-
+@@ -124 +120 @@
+-                  Branch<SurfaceSourceXlibWindow>, Branch<SurfaceSourceWaylandSurface>>()));
++                  Branch<SurfaceSourceXlibWindow>, Branch<SurfaceSourceWaylandSurface, SurfaceColorManagement>>()));
+@@ -192,0 +189,5 @@
++            if (auto* color = descriptor.Get<SurfaceColorManagement>()) {
++                DAWN_INVALID_IF(color->colorSpace != wgpu::PredefinedColorSpace::SRGBLinear ||
++                                    color->toneMappingMode != wgpu::ToneMappingMode::Extended,
++                                "Wayland supports only extended linear sRGB color management.");
++            }
+@@ -314 +315 @@
+-                Branch<SurfaceSourceXlibWindow>, Branch<SurfaceSourceWaylandSurface>>()
++                Branch<SurfaceSourceXlibWindow>, Branch<SurfaceSourceWaylandSurface, SurfaceColorManagement>>()
+@@ -360,0 +362 @@
++            mWaylandExtendedSrgb = descriptor.Has<SurfaceColorManagement>();
+diff --git a/src/dawn/native/Surface.h b/src/dawn/native/Surface.h
+--- a/src/dawn/native/Surface.h
++++ b/src/dawn/native/Surface.h
+@@ -101,0 +102 @@
++    bool UsesWaylandExtendedSrgb() const { return mWaylandExtendedSrgb; }
+@@ -172,0 +174 @@
++    bool mWaylandExtendedSrgb = false;
+diff --git a/src/dawn/native/vulkan/PhysicalDeviceVk.cpp b/src/dawn/native/vulkan/PhysicalDeviceVk.cpp
+--- a/src/dawn/native/vulkan/PhysicalDeviceVk.cpp
++++ b/src/dawn/native/vulkan/PhysicalDeviceVk.cpp
+@@ -42,0 +43 @@
++#include "src/dawn/native/Surface.h"
+@@ -1713,0 +1715,3 @@
++    const bool extendedSrgb = surface->UsesWaylandExtendedSrgb();
++    const bool usesColorSpaces =
++        GetVulkanInstance()->GetGlobalInfo().HasExt(InstanceExt::SwapchainColorspace);
+@@ -1714,0 +1719,5 @@
++        if (extendedSrgb &&
++            (!usesColorSpaces || surfaceFormat.format != VK_FORMAT_R16G16B16A16_SFLOAT ||
++             surfaceFormat.colorSpace != VK_COLOR_SPACE_EXTENDED_SRGB_LINEAR_EXT)) {
++            continue;
++        }
+diff --git a/src/dawn/native/vulkan/SwapChainVk.cpp b/src/dawn/native/vulkan/SwapChainVk.cpp
+--- a/src/dawn/native/vulkan/SwapChainVk.cpp
++++ b/src/dawn/native/vulkan/SwapChainVk.cpp
+@@ -309 +308,0 @@
+-    // Only support BGRA8Unorm (and RGBA8Unorm on android) with SRGB color space for now.
+@@ -312 +311,3 @@
+-    config.colorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
++    config.colorSpace = GetSurface()->UsesWaylandExtendedSrgb()
++                            ? VK_COLOR_SPACE_EXTENDED_SRGB_LINEAR_EXT
++                            : VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
+@@ -323 +324,2 @@
+-            "Vulkan SwapChain must support %s with sRGB colorspace.", config.wgpuFormat));
++            "Vulkan SwapChain must support %s with color space %d.", config.wgpuFormat,
++            static_cast<int>(config.colorSpace)));
+diff --git a/src/dawn/native/vulkan/VulkanBackend.cpp b/src/dawn/native/vulkan/VulkanBackend.cpp
+--- a/src/dawn/native/vulkan/VulkanBackend.cpp
++++ b/src/dawn/native/vulkan/VulkanBackend.cpp
+@@ -43,0 +44,5 @@
++
++#if DAWN_PLATFORM_IS(LINUX) && defined(DAWN_USE_WAYLAND)
++// Allows native clients to opt into the extended-linear Wayland surface contract.
++extern "C" DAWN_NATIVE_EXPORT void dawnVisualizerWaylandExtendedSrgbV1() {}
++#endif
+diff --git a/src/dawn/native/vulkan/VulkanExtensions.cpp b/src/dawn/native/vulkan/VulkanExtensions.cpp
+--- a/src/dawn/native/vulkan/VulkanExtensions.cpp
++++ b/src/dawn/native/vulkan/VulkanExtensions.cpp
+@@ -51,0 +52 @@
++    {InstanceExt::SwapchainColorspace, "VK_EXT_swapchain_colorspace"},
+@@ -104,0 +106 @@
++            case InstanceExt::SwapchainColorspace:
+diff --git a/src/dawn/native/vulkan/VulkanExtensions.h b/src/dawn/native/vulkan/VulkanExtensions.h
+--- a/src/dawn/native/vulkan/VulkanExtensions.h
++++ b/src/dawn/native/vulkan/VulkanExtensions.h
+@@ -49,0 +50 @@
++    SwapchainColorspace,
